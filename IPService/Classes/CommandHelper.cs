@@ -34,13 +34,14 @@ namespace IPService.Classes
             SpecificInputHandle("help");
         }
 
+        
         public Arguments ParseArguments(string input)
         {
-            var args = input.Trim().Split(' ');
+            var args = input.Split(' ');
             Arguments arguments = new();
-            for (int i = 0; i < args.Length; i += 2)
+            for (int i = 0; i < args.Length; i +=2)
             {
-                switch (args[i])
+                switch (args[i].Trim())
                 {
                     case "--file-log":
                         arguments.LogFilePath = args[i + 1];
@@ -65,8 +66,15 @@ namespace IPService.Classes
                         break;
                 }
             }
+
+            if (arguments.StartAddress == null && arguments.Mask != null)
+            {
+                arguments.Mask = null;
+            }
             return arguments;
         }
+
+            
 
         public bool IsConfigPath(string path)
         {

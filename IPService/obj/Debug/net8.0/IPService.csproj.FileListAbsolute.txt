@@ -12,3 +12,4 @@ C:\.projects\IPService\IPService\obj\Debug\net8.0\refint\IPService.dll
 C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.pdb
 C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.genruntimeconfig.cache
 C:\.projects\IPService\IPService\obj\Debug\net8.0\ref\IPService.dll
+C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.sourcelink.json
