@@ -1,5 +1,6 @@
 ﻿using IPService.Classes;
 using System.Globalization;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace IPService
@@ -11,6 +12,8 @@ namespace IPService
 
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             Console.WriteLine("enter parameters or, to read a config file, enter path");
             CommandHelper commandHelper = new();
             while (true)
@@ -26,18 +29,17 @@ namespace IPService
 
                 Arguments commandArgs = commandHelper.ParseArguments(input);
 
-                Process(commandArgs);
+                Process(commandArgs, commandHelper);
             }
         }
 
-        static void Process(Arguments arguments)
+        static void Process(Arguments arguments, CommandHelper commandHelper)
         {
-            CommandHelper commandHelper = new();
             try
             {
-                AddressProcessing addressProcessing = new();
-                var filteredAddresses = AddressProcessing.FilterAddresses(arguments);
-                var ipCounts = AddressProcessing.CountIPAddresses(filteredAddresses);
+                AddressProcessor addressProcessing = new();
+                var filteredAddresses = AddressProcessor.FilterAddresses(arguments);
+                var ipCounts = AddressProcessor.CountIPAddresses(filteredAddresses);
                 commandHelper.WriteResultsToFile(arguments.OutputFilePath, ipCounts);
 
                 Console.WriteLine("successfully.");

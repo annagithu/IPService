@@ -41,30 +41,38 @@ namespace IPService.Classes
             Arguments arguments = new();
             for (int i = 0; i < args.Length; i +=2)
             {
-                switch (args[i])
+                try
                 {
-                    case "--file-log":
-                        arguments.LogFilePath = args[i + 1];
-                        break;
-                    case "--file-output":
-                        arguments.OutputFilePath = args[i + 1];
-                        break;
-                    case "--address-start":
-                        arguments.StartAddress = args[i + 1];
-                        break;
-                    case "--address-mask":
-                        arguments.Mask = int.Parse(args[i + 1]);
-                        break;
-                    case "--time-start":
-                        arguments.StartTime = DateTime.ParseExact(args[i + 1], "dd.MM.yyyy", null);
-                        break;
-                    case "--time-end":
-                        arguments.EndTime = DateTime.ParseExact(args[i + 1], "dd.MM.yyyy", null);
-                        break;
-                    default:
-                        Console.WriteLine($"unknown argument: {args[i]}");
-                        break;
+                    switch (args[i])
+                    {
+                        case "--file-log":
+                            arguments.LogFilePath = args[i + 1];
+                            break;
+                        case "--file-output":
+                            arguments.OutputFilePath = args[i + 1];
+                            break;
+                        case "--address-start":
+                            arguments.StartAddress = args[i + 1];
+                            break;
+                        case "--address-mask":
+                            arguments.Mask = int.Parse(args[i + 1]);
+                            break;
+                        case "--time-start":
+                            arguments.StartTime = DateTime.ParseExact(args[i + 1], "dd.MM.yyyy", null);
+                            break;
+                        case "--time-end":
+                            arguments.EndTime = DateTime.ParseExact(args[i + 1], "dd.MM.yyyy", null);
+                            break;
+                        default:
+                            Console.WriteLine($"unknown argument: {args[i]}");
+                            break;
+                    }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"an error occurred while handling the data: {ex.Message}");
+                }
+
             }
 
             if (arguments.StartAddress == null && arguments.Mask != null)
@@ -74,8 +82,6 @@ namespace IPService.Classes
             }
             return arguments;
         }
-
-            
 
         public bool IsConfigPath(string path)
         {

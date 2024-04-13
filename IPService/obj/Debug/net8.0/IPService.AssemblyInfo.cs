@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IPService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af5a468a572afaaff7b08d14b2cb1397498b4b9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf281b0867f3888a325da9b950ce916e48a5a5db")]
 [assembly: System.Reflection.AssemblyProductAttribute("IPService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IPService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
