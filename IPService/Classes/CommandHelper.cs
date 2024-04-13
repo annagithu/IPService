@@ -70,6 +70,7 @@ namespace IPService.Classes
             if (arguments.StartAddress == null && arguments.Mask != null)
             {
                 arguments.Mask = null;
+                Console.WriteLine("sorry, but if the address_start parameter is not entered, then the address_mask parameter is ignored");
             }
             return arguments;
         }
