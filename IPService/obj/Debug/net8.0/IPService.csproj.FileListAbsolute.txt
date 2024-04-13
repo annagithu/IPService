@@ -1,0 +1,14 @@
+C:\.projects\IPService\IPService\bin\Debug\net8.0\IPService.exe
+C:\.projects\IPService\IPService\bin\Debug\net8.0\IPService.deps.json
+C:\.projects\IPService\IPService\bin\Debug\net8.0\IPService.runtimeconfig.json
+C:\.projects\IPService\IPService\bin\Debug\net8.0\IPService.dll
+C:\.projects\IPService\IPService\bin\Debug\net8.0\IPService.pdb
+C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.GeneratedMSBuildEditorConfig.editorconfig
+C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.AssemblyInfoInputs.cache
+C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.AssemblyInfo.cs
+C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.csproj.CoreCompileInputs.cache
+C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.dll
+C:\.projects\IPService\IPService\obj\Debug\net8.0\refint\IPService.dll
+C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.pdb
+C:\.projects\IPService\IPService\obj\Debug\net8.0\IPService.genruntimeconfig.cache
+C:\.projects\IPService\IPService\obj\Debug\net8.0\ref\IPService.dll

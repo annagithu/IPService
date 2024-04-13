@@ -1,0 +1,1 @@
+--file-log C:\.projects\IPService\journals\test.log --file-output C:\.projects\IPService\journals\output.txt --time-start 01.02.2024 --time-end 01.05.2024
