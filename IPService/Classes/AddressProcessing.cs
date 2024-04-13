@@ -14,7 +14,7 @@ namespace IPService.Classes
         {
             if (string.IsNullOrEmpty(arguments.LogFilePath))
             {
-                throw new ArgumentNullException(nameof(arguments.LogFilePath), "the expected path to the log file is null or empty. try again, or enter 'help' to see the commands");
+                throw new ArgumentNullException(nameof(arguments.LogFilePath), "the expected path to the logfile is null or empty. try again, or enter 'help' to see the commands");
             }
 
             var addresses = new List<string>();

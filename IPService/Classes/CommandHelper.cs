@@ -30,7 +30,7 @@ namespace IPService.Classes
 
         public void UnvalidInputHandle()
         {
-            Console.WriteLine("you entered invalid value. there is valid commands");
+            Console.WriteLine("you entered invalid value. there is valid commands:");
             SpecificInputHandle("help");
         }
 
@@ -88,6 +88,7 @@ namespace IPService.Classes
             {
                 using var reader = new StreamReader(configFilePath);
                 var command = reader.ReadToEnd();
+                reader.Close();
                 return command;
             }
             catch (Exception ex)
