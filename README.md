@@ -17,6 +17,8 @@ exit - выходит из консольного приложения.
 для чтения файла конфигурации необходимо просто написать путь к этому файлу.
 
 ## examples
+
+пример команды: --file-log C:\.projects\IPService\journals\test.log --file-output C:\.projects\IPService\journals\output.txt --time-start 01.02.2024 --time-end 01.05.2024
 примеры файлов лежат в папке journals
 * test.log - входные данные
 * output.txt - выходные данные
