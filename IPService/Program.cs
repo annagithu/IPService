@@ -1,5 +1,6 @@
 ﻿using IPService.Classes;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace IPService
 {
@@ -12,6 +13,7 @@ namespace IPService
             while (true)
             {
                 var input = Console.ReadLine().Replace("\"", "");
+                input = Regex.Replace(input, @"\s+", string.Empty);
 
                 if (commandHelper.IsSpecificInput(input)) { commandHelper.SpecificInputHandle(input); continue; } // если введенное слово - команда help или exit 
 

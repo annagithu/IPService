@@ -41,7 +41,7 @@ namespace IPService.Classes
             Arguments arguments = new();
             for (int i = 0; i < args.Length; i +=2)
             {
-                switch (args[i].Trim())
+                switch (args[i])
                 {
                     case "--file-log":
                         arguments.LogFilePath = args[i + 1];
