@@ -4,8 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace IPService
 {
-    internal class Program
+    internal partial class Program
     {
+        [GeneratedRegex(@"\s+")]
+        private static partial Regex deleteWhiteSpaces();
+
         static void Main(string[] args)
         {
             Console.WriteLine("enter parameters or, to read a config file, enter path");
@@ -13,7 +16,7 @@ namespace IPService
             while (true)
             {
                 var input = Console.ReadLine().Replace("\"", "");
-                input = Regex.Replace(input, @"\s+", string.Empty);
+                input = deleteWhiteSpaces().Replace(input, string.Empty);
 
                 if (commandHelper.IsSpecificInput(input)) { commandHelper.SpecificInputHandle(input); continue; } // если введенное слово - команда help или exit 
 
@@ -45,5 +48,6 @@ namespace IPService
             }
 
         }
+
     }
 }
